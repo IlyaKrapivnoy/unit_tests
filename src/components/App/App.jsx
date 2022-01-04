@@ -2,7 +2,16 @@ import { useEffect, useState } from 'react';
 import List from '../List';
 import Search from '../Search';
 
-const data = ['HTML', 'CSS', 'JS', 'TS', 'React', 'Vue', 'Angular', 'NodeJS'];
+const data = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Vue',
+    'Angular',
+    'NodeJS',
+];
 
 function App() {
     const [search, setSearch] = useState('');

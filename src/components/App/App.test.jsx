@@ -18,4 +18,16 @@ describe('App component', () => {
         userEvent.type(screen.getByRole('textbox'), 'React');
         expect(screen.getByDisplayValue(/React/)).toBeInTheDocument();
     });
+
+    it('search filter is working', () => {
+        render(<App />);
+
+        expect(screen.getByText(/Vue/)).toBeInTheDocument();
+        expect(screen.getByText(/JavaScript/)).toBeInTheDocument();
+
+        userEvent.type(screen.getByRole('textbox'), 'script');
+
+        expect(screen.queryByText(/Vue/)).toBeNull();
+        expect(screen.getByText(/JavaScript/)).toBeInTheDocument();
+    });
 });
