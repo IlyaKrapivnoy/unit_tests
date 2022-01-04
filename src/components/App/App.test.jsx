@@ -16,6 +16,6 @@ describe('App component', () => {
         expect(screen.queryByDisplayValue(/React/)).toBeNull();
 
         userEvent.type(screen.getByRole('textbox'), 'React');
-        expect(screen.queryByDisplayValue(/React/)).toBeInTheDocument();
+        expect(screen.getByDisplayValue(/React/)).toBeInTheDocument();
     });
 });
