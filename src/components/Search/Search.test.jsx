@@ -26,6 +26,7 @@ describe('Search component', () => {
         expect(screen.getByPlaceholderText(/search.../i)).toBeInTheDocument();
     });
 
+
     it('onChange works', () => {
         render(
             <Search value='' onChange={onChange}>
